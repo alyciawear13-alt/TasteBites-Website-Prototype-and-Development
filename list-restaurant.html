@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List your restaurant – TasteBites</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Taste<span>Bites</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a href="find.html">Find restaurants</a>
+        <a href="learn.html">Allergy guide</a>
+        <a href="for-restaurants.html">For restaurants</a>
+        <a href="about.html">Our mission</a>
+        <a href="profile.html" class="profile-link">👤 My profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="narrow">
+      <h1>Create your restaurant profile</h1>
+      <p class="muted">Free listing. You can update this any time so your menu is never out of date.</p>
+      <p class="small muted">Prototype note: profiles are saved only in this browser, so other people won't see yours yet.</p>
+
+      <div id="done" class="card hidden">
+        <h2>🎉 Your profile is live!</h2>
+        <p>It now shows up on Find Restaurants (in this browser) as "self-reported, not certified".</p>
+        <a class="btn" id="done-link" href="#">View my profile</a>
+        <a class="btn secondary" href="for-restaurants.html#pricing">Get certified</a>
+      </div>
+
+      <form id="restaurant-form" class="stack">
+
+        <!-- Basic info -->
+        <fieldset class="card">
+          <legend>Basic info</legend>
+          <div class="field">
+            <label for="f-name">Restaurant name</label>
+            <input type="text" id="f-name" required>
+          </div>
+          <div class="field">
+            <label for="f-address">Location (address)</label>
+            <input type="text" id="f-address" required>
+          </div>
+          <div class="grid-2" style="margin-top: 14px">
+            <div class="field">
+              <label for="f-cuisine">Food type</label>
+              <select id="f-cuisine"></select>
+            </div>
+            <div class="field">
+              <label for="f-price">Price</label>
+              <select id="f-price">
+                <option value="1">$ (under $15)</option>
+                <option value="2">$$ ($15–30)</option>
+                <option value="3">$$$ (over $30)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone number</label>
+              <input type="tel" id="f-phone">
+            </div>
+            <div class="field">
+              <label for="f-hours">Hours</label>
+              <input type="text" id="f-hours" placeholder="e.g. Mon – Sat 11am – 9pm">
+            </div>
+          </div>
+          <div class="field" style="margin-top: 14px">
+            <label>Meals you serve</label>
+            <div class="check-grid" id="f-meals"></div>
+          </div>
+          <div class="field">
+            <label for="f-bio">Short bio</label>
+            <textarea id="f-bio" placeholder="What makes your restaurant special, and why you care about allergy diners."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Food handling -->
+        <fieldset class="card">
+          <legend>Food handling practices</legend>
+          <div class="field">
+            <label for="f-practices">What do you do to keep allergy orders safe? (one per line)</label>
+            <textarea id="f-practices" placeholder="Separate fryer for gluten-free items&#10;Allergy tickets marked in red&#10;Staff trained during onboarding"></textarea>
+          </div>
+          <div class="field">
+            <label>Which allergens are used anywhere in your kitchen?</label>
+            <div class="check-grid" id="f-facility"></div>
+          </div>
+        </fieldset>
+
+        <!-- What they accommodate -->
+        <fieldset class="card">
+          <legend>What you can accommodate</legend>
+          <p class="small muted" style="margin-top: 0">Be honest. Diners trust "ask staff" more than a promise you can't keep.</p>
+          <table class="allergen-table" id="f-accommodates"></table>
+        </fieldset>
+
+        <!-- Menu -->
+        <fieldset class="card">
+          <legend>Menu</legend>
+          <div id="f-menu"></div>
+          <button type="button" class="btn secondary" id="add-dish" style="margin-top: 12px">+ Add a dish</button>
+        </fieldset>
+
+        <button class="btn" type="submit">Publish my profile</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 TasteBites · Cal Poly BUS 3310 student prototype</span>
+      <span>Restaurant listings are sample data for demo purposes.</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/list-restaurant.js"></script>
+</body>
+</html>

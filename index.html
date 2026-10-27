@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TasteBites – Eat out with food allergies, confidently</title>
+  <meta name="description" content="TasteBites connects diners who have food allergies with restaurants that can accommodate them.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Taste<span>Bites</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a href="find.html">Find restaurants</a>
+        <a href="learn.html">Allergy guide</a>
+        <a href="for-restaurants.html">For restaurants</a>
+        <a href="about.html">Our mission</a>
+        <a href="profile.html" class="profile-link">👤 My profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- ===== Opening screen: search + "who are you?" ===== -->
+      <section class="hero">
+        <h1>Eat out with food allergies, <span style="color: var(--brand)">without the worry</span></h1>
+        <p>Find restaurants that can actually handle your allergy, see exactly what they can and can't do, and stop over-explaining at every table.</p>
+
+        <form class="search-big" action="find.html" method="get" role="search">
+          <input type="search" name="q" placeholder="Search a restaurant, dish, or cuisine…" aria-label="Search restaurants">
+          <button class="btn" type="submit">Search</button>
+        </form>
+
+        <div class="role-choice">
+          <a class="card role-card" href="profile.html">
+            <div class="emoji">🍽️</div>
+            <h2>I'm a diner</h2>
+            <p class="muted">Save your allergies once, then see which restaurants and dishes fit you. Always free.</p>
+            <span class="btn">Set up my allergies</span>
+          </a>
+          <a class="card role-card" href="for-restaurants.html">
+            <div class="emoji">👩‍🍳</div>
+            <h2>I'm a restaurant</h2>
+            <p class="muted">Show allergy diners the work you already do, and win the whole table they bring with them.</p>
+            <span class="btn secondary">Why list on TasteBites</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ===== Disclaimer (diner must tick "I understand") ===== -->
+      <section>
+        <div class="disclaimer" data-accept>
+          <strong>⚠️ Please read: TasteBites is a guide, not a guarantee.</strong>
+          <p style="margin: 6px 0 0">
+            Restaurant allergy information is provided by the restaurants and by diner reviews.
+            No shared kitchen can promise zero cross-contact. A "TasteBites Certified" badge means the
+            restaurant's training and procedures were checked, not that every meal is allergen-free.
+            Always tell your server about your allergy, and dine at your own risk.
+          </p>
+          <label><input type="checkbox"> I understand</label>
+        </div>
+      </section>
+
+      <!-- ===== Why it matters ===== -->
+      <section>
+        <h2>Why TasteBites?</h2>
+        <div class="grid-3">
+          <div class="card stat">
+            <strong>95%</strong>
+            of allergy-affected diners have dropped plans to visit a restaurant because they couldn't find clear allergen info.
+            <div class="small muted">Nutritics, 2026</div>
+          </div>
+          <div class="card stat">
+            <strong>22%</strong>
+            of restaurant menus mention allergens at all, and over half of those just say "tell your server."
+          </div>
+          <div class="card stat">
+            <strong>1 in 10</strong>
+            U.S. adults has a diagnosed food allergy, and they usually pick where the whole group eats.
+            <div class="small muted">FARE, 2024</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== How it works ===== -->
+      <section>
+        <h2>How it works</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>1. Tell us your allergies</h3>
+            <p class="muted">Pick from the top 9 allergens plus gluten. We remember them so you never have to re-explain.</p>
+          </div>
+          <div class="card">
+            <h3>2. Find restaurants that fit</h3>
+            <p class="muted">Filter by cuisine, meal and price. Each restaurant shows what it can, can't, or might accommodate.</p>
+          </div>
+          <div class="card">
+            <h3>3. Eat, then rate it</h3>
+            <p class="muted">Rate how well your allergy was handled. Restaurants can't delete reviews, so the ratings stay honest.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 TasteBites · Cal Poly BUS 3310 student prototype</span>
+      <span>Restaurant listings are sample data for demo purposes.</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

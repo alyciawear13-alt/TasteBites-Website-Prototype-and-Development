@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant profile – TasteBites</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Taste<span>Bites</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a href="find.html">Find restaurants</a>
+        <a href="learn.html">Allergy guide</a>
+        <a href="for-restaurants.html">For restaurants</a>
+        <a href="about.html">Our mission</a>
+        <a href="profile.html" class="profile-link">👤 My profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <p><a href="find.html">← Back to all restaurants</a></p>
+
+      <!-- Filled in by js/restaurant.js using the ?id= in the web address -->
+      <div id="not-found" class="card hidden">
+        <h1>Restaurant not found</h1>
+        <p class="muted">This restaurant may have been removed. <a href="find.html">See all restaurants</a>.</p>
+      </div>
+
+      <div id="restaurant" class="stack hidden">
+
+        <!-- Name, badge, basic info -->
+        <section class="card">
+          <div class="profile-head">
+            <div>
+              <h1 id="r-name"></h1>
+              <div class="meta" id="r-meta"></div>
+            </div>
+            <div id="r-badge"></div>
+          </div>
+          <p id="r-bio" style="margin-bottom: 0"></p>
+          <p class="small muted" id="r-updated" style="margin-bottom: 0"></p>
+        </section>
+
+        <!-- Match against the diner's saved allergies -->
+        <section id="r-match" class="notice"></section>
+
+        <div class="grid-2">
+          <!-- What allergies they can accommodate -->
+          <section class="card">
+            <h2>Allergies they can accommodate</h2>
+            <table class="allergen-table" id="r-allergens"></table>
+          </section>
+
+          <!-- How the kitchen handles allergies -->
+          <section class="card">
+            <h2>How they handle allergies</h2>
+            <ul id="r-practices"></ul>
+            <h3 style="margin-top: 18px">Allergens used in this kitchen</h3>
+            <p class="small muted" style="margin-top: 0">Even if a dish doesn't contain these, cross-contact is possible.</p>
+            <div class="chips" id="r-facility"></div>
+          </section>
+        </div>
+
+        <!-- Menu with dishes that fit the diner highlighted -->
+        <section class="card">
+          <h2>Menu</h2>
+          <p class="small muted" id="menu-hint"></p>
+          <div id="r-menu"></div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="card">
+          <h2>How diners' allergies were handled</h2>
+          <p class="small muted">Restaurants can't remove these reviews.</p>
+          <div id="r-reviews"></div>
+
+          <h3 style="margin-top: 24px">Leave a review</h3>
+          <form id="review-form" class="stack">
+            <div class="grid-2">
+              <div class="field">
+                <label for="rv-name">Your name</label>
+                <input type="text" id="rv-name" required>
+              </div>
+              <div class="field">
+                <label for="rv-allergy">Your allergy</label>
+                <input type="text" id="rv-allergy" placeholder="e.g. Celiac, peanuts" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="rv-rating">How well was your allergy handled?</label>
+              <select id="rv-rating" required>
+                <option value="5">★★★★★ Excellent, felt completely safe</option>
+                <option value="4">★★★★☆ Good</option>
+                <option value="3">★★★☆☆ Okay, had to explain a lot</option>
+                <option value="2">★★☆☆☆ Poor</option>
+                <option value="1">★☆☆☆☆ Unsafe, I had a reaction or a close call</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="rv-text">What happened?</label>
+              <textarea id="rv-text" required></textarea>
+            </div>
+            <button class="btn" type="submit">Post review</button>
+            <span class="saved-msg hidden" id="rv-saved">Thanks! Your review was added.</span>
+          </form>
+        </section>
+
+        <!-- At your own risk -->
+        <section class="disclaimer">
+          <strong>Dine at your own risk.</strong>
+          This information comes from the restaurant and from diner reviews. No shared kitchen can guarantee zero
+          cross-contact. Always tell your server about your allergy.
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 TasteBites · Cal Poly BUS 3310 student prototype</span>
+      <span>Restaurant listings are sample data for demo purposes.</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/restaurant.js"></script>
+</body>
+</html>

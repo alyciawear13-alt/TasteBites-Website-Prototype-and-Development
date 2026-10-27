@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allergy guide – TasteBites</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Taste<span>Bites</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a href="find.html">Find restaurants</a>
+        <a href="learn.html">Allergy guide</a>
+        <a href="for-restaurants.html">For restaurants</a>
+        <a href="about.html">Our mission</a>
+        <a href="profile.html" class="profile-link">👤 My profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Safe food handling guide</h1>
+      <p class="muted">For diners, servers and cooks. Plain-language basics, not medical advice.</p>
+
+      <section class="grid-2">
+        <div class="card">
+          <h2>What is cross-contact?</h2>
+          <p>Cross-contact (often called cross-contamination) happens when an allergen gets into food that doesn't normally contain it. Cooking does <strong>not</strong> remove an allergen.</p>
+          <p>Common ways it happens:</p>
+          <ul>
+            <li>Shared fryer oil (fries cooked with breaded shrimp)</li>
+            <li>The same cutting board, knife, grill or tongs</li>
+            <li>Flour in the air in a bakery or pasta kitchen</li>
+            <li>Gloves or hands that touched another dish</li>
+            <li>Pre-made sauces with hidden ingredients from suppliers</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>How it affects the customer</h2>
+          <p>Even a tiny amount can cause a reaction. Depending on the person this can mean hives, stomach pain, trouble breathing, or anaphylaxis, which is a medical emergency. For people with celiac disease, gluten damages the small intestine even when there are no obvious symptoms.</p>
+          <p>Beyond the physical risk, many diners feel anxious or like a burden when eating out. Clear information up front takes that pressure off.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>The server-to-kitchen handoff</h2>
+        <p>Most mistakes happen when allergy information gets lost between the diner, the server and the cook. Good practice:</p>
+        <ol>
+          <li><strong>Diner:</strong> say the allergy clearly, and how serious it is.</li>
+          <li><strong>Server:</strong> mark the ticket (many kitchens use a special color) and tell the chef in person.</li>
+          <li><strong>Kitchen:</strong> wash hands, change gloves, use clean or dedicated tools, check every ingredient label.</li>
+          <li><strong>Delivery:</strong> the allergy plate is carried out separately and confirmed with the diner.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>The top 9 food allergens (plus gluten)</h2>
+        <p class="muted">The U.S. FDA names nine major allergens. We added gluten because of celiac disease.</p>
+        <div class="grid-3 allergen-cards" id="allergen-cards"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 TasteBites · Cal Poly BUS 3310 student prototype</span>
+      <span>Restaurant listings are sample data for demo purposes.</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    // Build one card per allergen from the ALLERGENS list in data.js
+    document.getElementById("allergen-cards").innerHTML = ALLERGENS.map(function (a) {
+      return '<div class="card"><h3>' + a.icon + " " + a.label + '</h3><p class="small" style="margin:0"><strong>Often found in:</strong> ' + a.foundIn + "</p></div>";
+    }).join("");
+  </script>
+</body>
+</html>
