@@ -32,6 +32,7 @@ The map on the Find Restaurants page needs an internet connection. Everything el
 | For restaurants | `for-restaurants.html` | Why TasteBites, pricing/subscription, liability concerns |
 | List your restaurant | `list-restaurant.html` | Restaurant profile form: menu, food handling practices, allergens in facility, what they accommodate |
 | Our mission | `about.html` | Mission |
+| Chloe's home page design | `chloe-home.html` | Alternative home page design by Chloe (kept for the team to compare) |
 
 ## Folder layout
 
