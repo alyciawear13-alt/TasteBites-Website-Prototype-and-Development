@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find restaurants – TasteBites</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Leaflet = free map library. Map tiles come from OpenStreetMap. -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Taste<span>Bites</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a href="find.html">Find restaurants</a>
+        <a href="learn.html">Allergy guide</a>
+        <a href="for-restaurants.html">For restaurants</a>
+        <a href="about.html">Our mission</a>
+        <a href="profile.html" class="profile-link">👤 My profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Find restaurants</h1>
+      <p class="muted" id="profile-hint"></p>
+
+      <div class="find-layout">
+
+        <!-- ===== Filters (left column) ===== -->
+        <details class="filters card" id="filter-panel" open>
+          <summary><strong>Filters</strong></summary>
+          <div class="field" style="margin-top: 12px">
+            <label for="search">Search</label>
+            <input type="search" id="search" placeholder="Name, dish, or cuisine">
+          </div>
+
+          <fieldset style="margin-top: 14px">
+            <legend>My allergies</legend>
+            <div class="check-list" id="allergy-filters"></div>
+            <label style="font-weight: 400; display: flex; gap: 8px; margin-top: 8px">
+              <input type="checkbox" id="hide-unsafe" checked>
+              Hide places that can't accommodate me
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Restaurant type</legend>
+            <div class="check-list" id="cuisine-filters"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Meal</legend>
+            <div class="check-list" id="meal-filters"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Price</legend>
+            <div class="check-list" id="price-filters"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Trust</legend>
+            <label style="font-weight: 400; display: flex; gap: 8px">
+              <input type="checkbox" id="certified-only"> TasteBites Certified only
+            </label>
+          </fieldset>
+
+          <button class="btn secondary" id="clear-filters" style="margin-top: 14px; width: 100%">Clear filters</button>
+        </details>
+
+        <!-- ===== Map + results (right column) ===== -->
+        <div>
+          <div id="map" class="map-fallback">Loading map…</div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap">
+            <strong id="result-count"></strong>
+            <label class="small" style="font-weight: 400">
+              Sort by
+              <select id="sort" style="width: auto; display: inline-block; margin-left: 6px">
+                <option value="match">Best match for me</option>
+                <option value="distance">Distance</option>
+                <option value="rating">Allergy rating</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="results" id="results"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 TasteBites · Cal Poly BUS 3310 student prototype</span>
+      <span>Restaurant listings are sample data for demo purposes.</span>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/find.js"></script>
+</body>
+</html>

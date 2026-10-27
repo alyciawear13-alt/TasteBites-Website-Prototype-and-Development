@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My profile – TasteBites</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Taste<span>Bites</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a href="find.html">Find restaurants</a>
+        <a href="learn.html">Allergy guide</a>
+        <a href="for-restaurants.html">For restaurants</a>
+        <a href="about.html">Our mission</a>
+        <a href="profile.html" class="profile-link">👤 My profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="narrow">
+      <h1>My diner profile</h1>
+      <p class="muted">Tell us once. We'll use your allergies to filter out restaurants and highlight dishes that fit you.</p>
+      <p class="small muted">Prototype note: your profile is saved only in this browser. There are no accounts yet.</p>
+
+      <form id="profile-form" class="card stack">
+        <div class="field">
+          <label for="p-name">Name</label>
+          <input type="text" id="p-name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="p-email">Email</label>
+          <input type="email" id="p-email" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="p-phone">Phone number</label>
+          <input type="tel" id="p-phone" autocomplete="tel">
+        </div>
+
+        <fieldset>
+          <legend>My allergies</legend>
+          <div class="check-grid" id="p-allergies"></div>
+        </fieldset>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center">
+          <button class="btn" type="submit">Save profile</button>
+          <a class="btn secondary" href="find.html">Find restaurants for me →</a>
+          <span class="saved-msg hidden" id="p-saved">Saved!</span>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 TasteBites · Cal Poly BUS 3310 student prototype</span>
+      <span>Restaurant listings are sample data for demo purposes.</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    // Profile page: fill the form from saved data, save on submit.
+    document.addEventListener("DOMContentLoaded", function () {
+      var profile = getProfile();
+
+      document.getElementById("p-allergies").innerHTML = ALLERGENS.map(function (a) {
+        var checked = profile.allergies.indexOf(a.id) !== -1 ? "checked" : "";
+        return '<label><input type="checkbox" name="allergy" value="' + a.id + '" ' + checked + "> " + a.icon + " " + a.label + "</label>";
+      }).join("");
+      document.getElementById("p-name").value = profile.name;
+      document.getElementById("p-email").value = profile.email;
+      document.getElementById("p-phone").value = profile.phone;
+
+      document.getElementById("profile-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        saveProfile({
+          name: document.getElementById("p-name").value.trim(),
+          email: document.getElementById("p-email").value.trim(),
+          phone: document.getElementById("p-phone").value.trim(),
+          allergies: Array.prototype.map.call(
+            document.querySelectorAll('input[name="allergy"]:checked'),
+            function (el) { return el.value; }
+          )
+        });
+        document.getElementById("p-saved").classList.remove("hidden");
+      });
+    });
+  </script>
+</body>
+</html>
