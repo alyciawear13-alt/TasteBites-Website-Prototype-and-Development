@@ -24,6 +24,9 @@ needs a team decision (see Open issues). Details of the prototype itself are in
   no publish directory. Netlify redeploys automatically whenever `main` changes.
 - After the merge, `chloehouse752-bit` uploaded a new `index.html` straight to `main` (commit `e057fb6`,
   "Add files via upload") and a new `README.md` on branch `chloehouse752-bit-patch-1` (not merged, no PR).
+- PR #3 (merged): this handoff file.
+- PR #4 (open, not merged yet): puts the prototype home page back in `index.html` and saves the teammate's
+  design unchanged as `chloe-home.html`, so both can be compared; `README.md` lists `chloe-home.html`.
 
 ## Files changed
 | File | What changed |
@@ -33,7 +36,8 @@ needs a team decision (see Open issues). Details of the prototype itself are in
 | `handoffs/handoff_2026-10-27_alycia_first-prototype.md` | Added (PR #2) |
 | `index.html` | Replaced by teammate (`e057fb6`): one self-contained page named "TasteBite", own inline CSS/JS, no links to the other 7 pages |
 | `README.md` (branch `chloehouse752-bit-patch-1` only) | Rewritten for GitHub Pages and a single `index.html`; not on `main` |
-| `handoffs/handoff_2026-10-27_alycia_github-and-netlify-setup.md` | This file |
+| `index.html`, `chloe-home.html`, `README.md` (PR #4, not merged yet) | Prototype home page restored; teammate's page kept as `chloe-home.html` |
+| `handoffs/handoff_2026-10-27_alycia_github-and-netlify-setup.md` | This file (PR #3, plus this update) |
 
 ## Decisions and reasoning
 - **Decision:** Skip Figma for now.
@@ -42,14 +46,16 @@ needs a team decision (see Open issues). Details of the prototype itself are in
 - **Decision:** Host on Netlify by importing the GitHub repo, no build settings.
   **Why:** The site is plain files with no build step, and Netlify auto-updates on every change to `main`.
   **Rejected:** Vercel (works too, no reason to switch); GitHub Pages (suggested in the teammate's README branch, not chosen).
+- **Decision:** Restore the prototype home page and keep the teammate's design as `chloe-home.html` (PR #4).
+  **Why:** The new page cut off links to the other 7 pages on the live site; keeping it as its own file loses no work.
+  **Rejected:** Deleting the teammate's page, or leaving it as the home page with no way to reach the other pages.
 - **Decision:** Handoff files live in `handoffs/` and are added through pull requests.
   **Why:** Every teammate and AI tool can find the latest state in one place, and PRs let the group see changes before they go live.
 
 ## Open issues / blockers
-- **The live home page changed.** Because Netlify deploys `main`, the site now shows the teammate's new
-  `index.html`. It has no links to Find restaurants, Allergy guide, For restaurants, Profile, etc., so those
-  pages are only reachable by typing their URL. It also uses the name "TasteBite" and different sample restaurants.
-  The group needs to choose: keep the 8-page version, keep the new design, or combine them.
+- **Live home page:** until PR #4 is merged, the live site shows the teammate's `index.html`, which has no
+  links to the other 7 pages. After merging, the group still needs to pick a design (or combine them):
+  compare `index.html` with `chloe-home.html`.
 - Name is inconsistent: "TasteBites" (site), "TasteBite" (teammate's page), "TrustBites" (`HANDOFF_PROMPT.md`).
 - Netlify site still has its random default name: live URL is https://imaginative-pixie-afea43.netlify.app
   (from the Netlify bot on PR #3). Netlify also posts a preview link on every PR.
@@ -58,7 +64,7 @@ needs a team decision (see Open issues). Details of the prototype itself are in
 - Unknown whether the other groupmates have accepted their collaborator invites.
 
 ## Next steps
-1. Group decides which home page to keep; then restore or merge `index.html` through a PR (old version is in commit `31b53fc`).
+1. Merge PR #4, then the group compares `index.html` and `chloe-home.html` and picks or combines a design.
 2. Agree that changes go through pull requests, not direct uploads to `main`, since `main` is the live site.
 3. Rename the Netlify site (Site configuration → Change site name) and paste the URL into `README.md`.
 4. Open the live site and check the map on the Find restaurants page.
