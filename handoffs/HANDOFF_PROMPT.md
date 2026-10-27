@@ -1,4 +1,4 @@
-# TasteBites: End-of-Session Handoff Prompt
+# TrustBites: End-of-Session Handoff Prompt
 
 **How to use:** At the end of every work session with Claude or ChatGPT/Codex, paste the prompt below into the same chat. Save what it gives you into the repo's `handoffs/` folder using the filename it suggests, then commit and push.
 
@@ -7,7 +7,7 @@
 ## Copy and paste this prompt
 
 ```
-We're done for today. Write a handoff file for my TasteBites teammates
+We're done for today. Write a handoff file for my TrustBites teammates
 (a student group website where diners and restaurants communicate about
 food allergies). A teammate who wasn't here, or a different AI tool,
 should be able to read it and pick up exactly where I left off.
