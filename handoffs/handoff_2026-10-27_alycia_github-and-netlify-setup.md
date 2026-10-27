@@ -51,7 +51,8 @@ needs a team decision (see Open issues). Details of the prototype itself are in
   pages are only reachable by typing their URL. It also uses the name "TasteBite" and different sample restaurants.
   The group needs to choose: keep the 8-page version, keep the new design, or combine them.
 - Name is inconsistent: "TasteBites" (site), "TasteBite" (teammate's page), "TrustBites" (`HANDOFF_PROMPT.md`).
-- Live Netlify URL hasn't been written down here yet. Netlify site name is still the random default.
+- Netlify site still has its random default name: live URL is https://imaginative-pixie-afea43.netlify.app
+  (from the Netlify bot on PR #3). Netlify also posts a preview link on every PR.
 - Map on `find.html` hasn't been tested on the live site.
 - `$49/month` Certified price in `for-restaurants.html` is a placeholder.
 - Unknown whether the other groupmates have accepted their collaborator invites.
@@ -68,4 +69,5 @@ needs a team decision (see Open issues). Details of the prototype itself are in
 - Read this file and `handoff_2026-10-27_alycia_first-prototype.md` first.
 - Plain HTML/CSS/JS, no install. Preview locally with `python3 -m http.server` in the repo folder → http://localhost:8000.
 - `main` = live Netlify site. Check `git log origin/main` before editing; teammates commit via GitHub's "Add files via upload".
+- Live site: https://imaginative-pixie-afea43.netlify.app (Netlify project `imaginative-pixie-afea43`).
 - Alycia is new to GitHub: explain branches, PRs and merging in simple terms.
