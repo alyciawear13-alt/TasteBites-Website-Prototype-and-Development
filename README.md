@@ -1,4 +1,4 @@
-# TasteBites – Website Prototype
+# TrustBites – Website Prototype
 
 TasteBites is a website where **diners with food allergies** and **restaurants** communicate about allergy concerns.
 Diners save their allergies once and find restaurants (and dishes) that fit them. Restaurants show the allergy work they
