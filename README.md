@@ -1,6 +1,6 @@
 # TrustBites – Website Prototype
 
-TasteBites is a website where **diners with food allergies** and **restaurants** communicate about allergy concerns.
+TrustBites is a website where **diners with food allergies** and **restaurants** communicate about allergy concerns.
 Diners save their allergies once and find restaurants (and dishes) that fit them. Restaurants show the allergy work they
 already do, and can get certified.
 
@@ -29,7 +29,7 @@ The map on the Find Restaurants page needs an internet connection. Everything el
 | Restaurant profile | `restaurant.html?id=...` | Name, allergies they can accommodate, bio, menu with highlighting, reviews, "at your own risk" |
 | Diner profile | `profile.html` | Name, email, phone, allergies (used to filter restaurants) |
 | Allergy guide | `learn.html` | Safe food handling: cross-contact, how it affects customers, top 9 allergens |
-| For restaurants | `for-restaurants.html` | Why TasteBites, pricing/subscription, liability concerns |
+| For restaurants | `for-restaurants.html` | Why TrustBites, pricing/subscription, liability concerns |
 | List your restaurant | `list-restaurant.html` | Restaurant profile form: menu, food handling practices, allergens in facility, what they accommodate |
 | Our mission | `about.html` | Mission |
 | Chloe's home page design | `chloe-home.html` | Alternative home page design by Chloe (kept for the team to compare) |

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TasteBite | Eat out with more confidence</title>
+  <title>TrustBites | Eat out with more confidence</title>
   <style>
     :root { --ink:#17342f; --muted:#5d716b; --cream:#fbfaf4; --mint:#dff4e6; --green:#167a5b; --coral:#ef7259; --line:#dbe6df; --card:#fff; }
     * { box-sizing:border-box; }
@@ -34,14 +34,14 @@
   </style>
 </head>
 <body>
-  <header><div class="brand"><span class="brand-mark">✦</span>TasteBite</div><nav><a href="#restaurants">Find restaurants</a><a href="#how-it-works">How it works</a><a class="nav-cta" href="#restaurants">For restaurants →</a></nav></header>
+  <header><div class="brand"><span class="brand-mark">✦</span>TrustBites</div><nav><a href="#restaurants">Find restaurants</a><a href="#how-it-works">How it works</a><a class="nav-cta" href="#restaurants">For restaurants →</a></nav></header>
   <section class="hero"><div class="eyebrow">Allergy-aware dining</div><h1>Find a table that gets it.</h1><p>Search restaurants by your food allergy and see their reported training, kitchen practices, and diner feedback before you go.</p><div class="searchbar"><span>⌕</span><input id="search" type="search" placeholder="Search restaurants or cuisines" aria-label="Search restaurants" /><button id="searchButton">Search</button></div></section>
   <main>
     <section id="restaurants"><div class="section-title"><h2>Explore San Luis Obispo</h2><span class="result-count" id="resultCount"></span></div><div class="filters" aria-label="Allergy filters"><button class="filter active" data-filter="All">All allergies</button><button class="filter" data-filter="Gluten-free">Gluten-free / Celiac</button><button class="filter" data-filter="Dairy-free">Dairy-free</button><button class="filter" data-filter="Nut-aware">Nut-aware</button><button class="filter" data-filter="Vegan">Vegan</button></div><div class="grid" id="restaurantGrid"></div><div id="empty" class="empty"><strong>No matches yet.</strong><br>Try another search or allergy filter.</div></section>
-    <section id="how-it-works" class="trust"><div><div class="eyebrow" style="color:#a9efca">Your safety comes first</div><h2>Clear info. Better questions. More confidence.</h2><p>TasteBite is designed to make allergy information easier to find—not to promise a risk-free meal. Always let staff know about your allergy before ordering.</p></div><div class="trust-list"><div class="trust-item"><b>Restaurant profile</b>See reported practices, not just menu labels.</div><div class="trust-item"><b>Certification status</b>Know whether information is restaurant-verified.</div><div class="trust-item"><b>Diner feedback</b>Learn from people who have eaten there.</div><div class="trust-item"><b>Better conversations</b>Bring the right questions to the table.</div></div></section>
+    <section id="how-it-works" class="trust"><div><div class="eyebrow" style="color:#a9efca">Your safety comes first</div><h2>Clear info. Better questions. More confidence.</h2><p>TrustBites is designed to make allergy information easier to find—not to promise a risk-free meal. Always let staff know about your allergy before ordering.</p></div><div class="trust-list"><div class="trust-item"><b>Restaurant profile</b>See reported practices, not just menu labels.</div><div class="trust-item"><b>Certification status</b>Know whether information is restaurant-verified.</div><div class="trust-item"><b>Diner feedback</b>Learn from people who have eaten there.</div><div class="trust-item"><b>Better conversations</b>Bring the right questions to the table.</div></div></section>
   </main>
-  <footer><b>TasteBite prototype.</b> Restaurant cards are sample profiles for this class demo and must be verified with each restaurant before public use. A listing or certification does not guarantee that a meal is allergen-free or safe from cross-contact.</footer>
-  <dialog id="detailsDialog"><div class="modal"><div class="modal-head"><div><div class="eyebrow">TasteBite demo profile</div><h2 id="modalName"></h2><p id="modalMeta"></p></div><button class="close" id="closeDialog" aria-label="Close">×</button></div><div id="modalPractices"></div><p class="modal-note">Before ordering: tell your server about your allergy and ask how your dish is prepared today. Cross-contact can still happen in any shared kitchen.</p></div></dialog>
+  <footer><b>TrustBites prototype.</b> Restaurant cards are sample profiles for this class demo and must be verified with each restaurant before public use. A listing or certification does not guarantee that a meal is allergen-free or safe from cross-contact.</footer>
+  <dialog id="detailsDialog"><div class="modal"><div class="modal-head"><div><div class="eyebrow">TrustBites demo profile</div><h2 id="modalName"></h2><p id="modalMeta"></p></div><button class="close" id="closeDialog" aria-label="Close">×</button></div><div id="modalPractices"></div><p class="modal-note">Before ordering: tell your server about your allergy and ask how your dish is prepared today. Cross-contact can still happen in any shared kitchen.</p></div></dialog>
   <script>
     const restaurants = [
       {name:"Urban Café", cuisine:"Mediterranean · Downtown SLO", icon:"🥗", status:"Restaurant verified", verified:true, rating:"4.8", reviews:"32 allergy diners", tags:["Gluten-free","Dairy-free","Vegan"], practices:["Reported ingredient guidance available for staff","Allergy request communicated to kitchen","Menu choices can be discussed before ordering"]},

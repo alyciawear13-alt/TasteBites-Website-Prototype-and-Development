@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ---------- 4. Draw the results ----------
   function resultCard(r) {
     var badge = r.certified
-      ? '<span class="badge certified">✔ TasteBites Certified</span>'
+      ? '<span class="badge certified">✔ TrustBites Certified</span>'
       : '<span class="badge self">Self-reported (not certified)</span>';
     var rating = r.avg ? '<span class="stars">' + stars(Math.round(r.avg)) + "</span> " + r.avg + " allergy rating (" + r.reviews.length + ")" : "No reviews yet";
     var matchLine = r.match.level === "none" ? ""
