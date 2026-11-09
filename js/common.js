@@ -1,5 +1,5 @@
 /* =========================================================
-   TasteBites – shared helpers used on every page
+   TrustBites – shared helpers used on every page
    ---------------------------------------------------------
    There is no database yet. Anything a visitor saves (their
    profile, reviews, a restaurant they list) is kept in their

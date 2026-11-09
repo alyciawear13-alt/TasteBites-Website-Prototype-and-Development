@@ -1,5 +1,5 @@
 /* =========================================================
-   TasteBites – sample data
+   TrustBites – sample data
    ---------------------------------------------------------
    Everything the site shows comes from this file (plus anything
    a visitor saves in their own browser, see storage.js).

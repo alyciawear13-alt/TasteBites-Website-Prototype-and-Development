@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var profile = getProfile();
   var myAllergies = profile.allergies || [];
-  document.title = r.name + " – TasteBites";
+  document.title = r.name + " – TrustBites";
   document.getElementById("restaurant").classList.remove("hidden");
 
   // ---------- Header info ----------
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     escapeHTML(r.phone), escapeHTML(r.hours)
   ].filter(Boolean).map(function (x) { return "<span>" + x + "</span>"; }).join("");
   document.getElementById("r-badge").innerHTML = r.certified
-    ? '<span class="badge certified">✔ TasteBites Certified</span>'
+    ? '<span class="badge certified">✔ TrustBites Certified</span>'
     : '<span class="badge self">Self-reported (not certified)</span>';
   document.getElementById("r-bio").textContent = r.bio || "";
   document.getElementById("r-updated").textContent = r.lastUpdated

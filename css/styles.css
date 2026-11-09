@@ -1,5 +1,5 @@
 /* =========================================================
-   TasteBites – shared styles for every page
+   TrustBites – shared styles for every page
    Colors live in :root so the whole look can be changed in one place.
    ========================================================= */
 
@@ -9,7 +9,7 @@
   --ink: #2b2420;         /* main text */
   --muted: #6f6259;       /* secondary text */
   --line: #eadfd3;        /* borders */
-  --brand: #d9572b;       /* TasteBites orange */
+  --brand: #d9572b;       /* TrustBites orange */
   --brand-dark: #b4441d;
   --brand-soft: #fde8dc;
   --safe: #2f7d4f;        /* "can accommodate" green */
